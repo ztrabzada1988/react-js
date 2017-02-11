@@ -30,6 +30,7 @@ var Person = React.createClass({
         });
     },
     render: function() {
+        // if
         var classes = 'person' + (this.state.highlight ? 'highlight' : '');
         return (
             <div className={classes} onClick={this.onClick}>
