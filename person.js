@@ -15,7 +15,9 @@ var ReactDOM = require('react-dom');
        // </div>
    // );
 //};
- // });
+ //});
+
+
 var Person = React.createClass({
     getInitialState: function() {
         return {
@@ -28,14 +30,14 @@ var Person = React.createClass({
         });
     },
     render: function() {
-        var classes = 'person ' + (this.state.highlight ? 'highlight' : '');
+        var classes = 'person' + (this.state.highlight ? 'highlight' : '');
         return (
             <div className={classes} onClick={this.onClick}>
-            <div className="person-name">{this.props.name}</div>
-            <img className="person-img" src={this.props.imageUrl} />
-            <div className="person-job">
-            {this.props.job}
-            </div>
+                <div className="person-name">{this.props.name}</div>
+                <img className="person-img" src={this.props.imageUrl} />
+                <div className="person-job">
+                    {this.props.job}
+                </div>
             </div>
         );
     }
